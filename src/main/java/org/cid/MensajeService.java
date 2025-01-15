@@ -1,5 +1,7 @@
 package org.cid;
 
+import java.util.Scanner;
+
 public class MensajeService {
 
     /*
@@ -8,6 +10,19 @@ public class MensajeService {
 
     public static void crearMensaje(){
 
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Escribe el mensaje:");
+        String mensaje = scanner.nextLine();
+
+        System.out.println("Escribe tu nombre:");
+        String autor = scanner.nextLine();
+
+        Mensaje mensajeObject = new Mensaje();
+        mensajeObject.setMensaje(mensaje);
+        mensajeObject.setAutorMensaje(autor);
+
+        MensajesDAO.crearMensajeDB(mensajeObject);
     }
 
     public static void listarMensajes(){
