@@ -1,11 +1,10 @@
 package org.cid;
 
-import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
         int opcion = 0;
@@ -28,16 +27,7 @@ public class Main {
                 default -> {
                 }
             }
-
         }while(opcion != 5);
-
-        Conexion conexion = new Conexion();
-
-        try(Connection connection = conexion.getConnection()){
-
-        }catch (SQLException e){
-            System.err.println(e);
-        }
-
+        ConnectDatabase.getConnection().close();
     }
 }

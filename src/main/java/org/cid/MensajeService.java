@@ -1,7 +1,7 @@
 package org.cid;
 
 import java.util.Scanner;
-
+//TODO: * listarMensajes() * borrarMensajes() * editarMensajes()
 public class MensajeService {
 
     /*
