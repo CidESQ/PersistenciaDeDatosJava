@@ -46,4 +46,14 @@ public class Mensaje {
     public void setFechaMensaje(String fechaMensaje) {
         this.fechaMensaje = fechaMensaje;
     }
+
+    @Override
+    public String toString() {
+        return "Mensaje{" +
+                "idMensaje='" + idMensaje + '\'' +
+                ", mensaje='" + mensaje + '\'' +
+                ", autorMensaje='" + autorMensaje + '\'' +
+                ", fechaMensaje='" + fechaMensaje + '\'' +
+                '}';
+    }
 }

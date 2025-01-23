@@ -12,7 +12,7 @@ public class ConnectDatabase {
 
     private static volatile Connection myConnection;
 
-    //ConstrcutorPrivado para evitar instancias
+    //Constrcutor Privado para evitar instancias
     private ConnectDatabase(){}
 
     public static Connection getConnection(){
@@ -21,7 +21,6 @@ public class ConnectDatabase {
                 if (myConnection == null){ //Double check locking
                     try {
                         myConnection = DriverManager.getConnection(URL, USER, PASS);
-                        System.out.println("Successfully Connected");
                     } catch (SQLException e) {
                         throw new RuntimeException("Error al conectar con la base de datos", e);
                     }
